@@ -136,6 +136,7 @@ else:
     WEBHOOK = Config.WEBHOOK
 
 
+pbot = Client("PyrogramBot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 telethn = TelegramClient("TelethonBot", API_ID, API_HASH)
 updater = tg.Updater(TOKEN, workers=8, use_context=True)
 bot = updater.bot
