@@ -180,9 +180,5 @@ def main():
         updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True)
 
 
-    updater.idle()
-
-
 pbot.start()
 main()
-idle()
