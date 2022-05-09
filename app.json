@@ -33,41 +33,16 @@
         "value": "1063430421",
         "required": false
 	  },
-      "BL_CHATS": {
-         "description": "A space separated list of group id you want blacklisted.",
-         "required": false,
-         "value": ""
-	  },
-      "DEL_CMDS": {
-         "description": "Set this to true if you want to delete command messages from users who don't have the perms to run that command.",
-         "required": false,
-	 "value": "true"
-	  },
-      "DEV_USERS": {
-         "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Legend support then keep the current ID's here at they are and add yours.",
-         "required": false,
-         "value": "1063430421"
-          },
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
 	 "required": false,
          "value": "ANYTHING"
-	  },
-      "EVENT_LOGS": {
-         "description": "Event logs group id number for note down important bot level events, recommend to make this public. If you don't add event log group id , gban will not work",
-         "required": false,
-         "value": ""
 	  },
       "GDRIVE_FOLDER_ID": {
         "description": "This is the folder ID of the Google Drive Folder to which you want to upload all the mirrors.",
         "required": false,
 	"value": ""
           },
-      "JOIN_LOGGER": {
-         "description": "Give a channel id number for saving bot log ",
-         "required": false,
-         "value": ""
-	  },
       "No_LOAD": {
          "description": "Dont load these modules cause they shit, space separation",
          "required": false,
@@ -82,41 +57,16 @@
          "description": "Your telegram username without the @",
 	 "required": false,
          "value": "smexynos7870"
-	  },
-      "SQLALCHEMY_DATABASE_URI": {
-         "description": "something://somewhat:user@hosturl:port/databasename  # needed for any database modules # its URI and not URL as herok and similar ones only accept it as such",
-         "required": false,
-         "value": ""
-          },
-      "SUDO_USERS": {
-         "description": "A space separated list of user IDs who you want to assign as sudo users.",
-         "required": false,
-         "value": "1063430421"
           },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to atrocious support than consider you made an enemy.",
          "required": false,
          "value": ""
 	  },
-      "SUPPORT_USERS": {
-         "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
-         "required": false,
-         "value": "1063430421"
-          },
-      "TIGER_USERS": {
-         "description": "A space separated list of user IDs who you wanna assign as tiger users.",
-         "required": false,
-         "value": "1063430421"
-          },
       "TOKEN": {
          "description": "Your bot token. Get one from telegram BotFather ",
          "required": true,
          "value": "5022788742:AAHBHCYVlOnM5JM--H-AZieVrtGHpDuufeA"
-	  },
-      "WHITELIST_USERS": {
-         "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
-         "required": false,
-         "value": "1063430421" 	 
       }
    },
    "keywords": [
