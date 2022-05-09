@@ -30,8 +30,8 @@
 	  },
       "AUTHORIZED_CHATS": {
         "description": "Fill User ID and Chat ID of you want to authorize for use gdrive /clone command .",
-        "value": "",
-        "required": true
+        "value": "1063430421",
+        "required": false,
 	  },
       "BL_CHATS": {
          "description": "A space separated list of group id you want blacklisted.",
@@ -55,7 +55,7 @@
 	  },
       "EVENT_LOGS": {
          "description": "Event logs group id number for note down important bot level events, recommend to make this public. If you don't add event log group id , gban will not work",
-         "required": true,
+         "required": false,
          "value": ""
 	  },
       "JOIN_LOGGER": {
@@ -71,12 +71,12 @@
       "OWNER_ID": {
          "description": "Your telegram id number.",
          "required": true,
-         "value": ""
+         "value": "1063430421"
           },
       "OWNER_USERNAME": {
          "description": "Your telegram username without the @",
 	 "required": false,
-         "value": ""
+         "value": "smexynos7870"
 	  },
       "SQLALCHEMY_DATABASE_URI": {
          "description": "something://somewhat:user@hosturl:port/databasename  # needed for any database modules # its URI and not URL as herok and similar ones only accept it as such",
@@ -106,7 +106,7 @@
       "TOKEN": {
          "description": "Your bot token. Get one from telegram BotFather ",
          "required": true,
-         "value": ""
+         "value": "5022788742:AAHBHCYVlOnM5JM--H-AZieVrtGHpDuufeA"
 	  },
       "WHITELIST_USERS": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
