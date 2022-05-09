@@ -75,6 +75,7 @@ if ENV:
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     parent_id = os.environ.get("GDRIVE_FOLDER_ID")
     PORT = int(os.environ.get("PORT", 5000))
+    STATUS_LIMIT = os.environ.get("STATUS_LIMIT", "3")
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     URL = os.environ.get("URL", "")  # Does not contain token
     USE_SERVICE_ACCOUNTS = False
