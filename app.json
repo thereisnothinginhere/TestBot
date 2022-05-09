@@ -58,6 +58,11 @@
          "required": false,
          "value": ""
 	  },
+      "GDRIVE_FOLDER_ID": {
+        "description": "This is the folder ID of the Google Drive Folder to which you want to upload all the mirrors.",
+        "required": false,
+	"value": ""
+          },
       "JOIN_LOGGER": {
          "description": "Give a channel id number for saving bot log ",
          "required": false,
