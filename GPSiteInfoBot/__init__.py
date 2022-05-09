@@ -9,7 +9,9 @@ from pyrogram import Client
 from telegram.ext import CallbackContext
 from telethon import TelegramClient
 
+DRIVES_IDS = []
 DRIVES_NAMES = []
+INDEX_URLS = []
 StartTime = time.time()
 
 # enable logging
