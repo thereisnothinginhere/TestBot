@@ -76,6 +76,7 @@ if ENV:
     INFOPIC = bool(os.environ.get("INFOPIC", False))
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
+    parent_id = os.environ.get("GDRIVE_FOLDER_ID")
     PORT = int(os.environ.get("PORT", 5000))
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     URL = os.environ.get("URL", "")  # Does not contain token
