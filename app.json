@@ -33,21 +33,11 @@
         "value": "1063430421",
         "required": false
 	  },
-      "ENV": {
-         "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
-	 "required": false,
-         "value": "ANYTHING"
-	  },
       "GDRIVE_FOLDER_ID": {
         "description": "This is the folder ID of the Google Drive Folder to which you want to upload all the mirrors.",
         "required": false,
 	"value": ""
           },
-      "No_LOAD": {
-         "description": "Dont load these modules cause they shit, space separation",
-         "required": false,
-         "value": "cleaner rss connection math"
-          },      
       "OWNER_ID": {
          "description": "Your telegram id number.",
          "required": true,
