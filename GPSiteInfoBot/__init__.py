@@ -5,6 +5,7 @@ import time
 import threading
 import telegram.ext as tg
 
+from pyrogram import Client
 from telegram.ext import CallbackContext
 from telethon import TelegramClient
 
