@@ -153,16 +153,5 @@ updater = tg.Updater(TOKEN, workers=8, use_context=True)
 bot = updater.bot
 dispatcher = updater.dispatcher
 
-SUDO_USERS.add(OWNER_ID)
-DEV_USERS.add(OWNER_ID)
-
 AUTHORIZED_CHATS = list(AUTHORIZED_CHATS)
-SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
-DEV_USERS = list(DEV_USERS)
-WHITELIST_USERS = list(WHITELIST_USERS)
-SUPPORT_USERS = list(SUPPORT_USERS)
-TIGER_USERS = list(TIGER_USERS)
 
-# make sure the regex handler can take extra kwargs
-tg.CommandHandler = CustomCommandHandler
-tg.MessageHandler = CustomMessageHandler
