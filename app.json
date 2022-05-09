@@ -38,6 +38,11 @@
         "required": false,
 	"value": "17odsRh5eWC-Z316HMFhIpcKWufLZ9cq2"
           },
+      "INDEX_URL": {
+        "description": "Refer to https://gitlab.com/ParveenBhadooOfficial/Google-Drive-Index The URL should not have any trailing '/'.",
+        "required": false,
+	"value": "https://mirror-bot.al-noman.workers.dev/0:"
+          },
       "OWNER_ID": {
          "description": "Your telegram id number.",
          "required": true,
