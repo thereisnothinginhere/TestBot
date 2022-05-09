@@ -9,6 +9,7 @@ from pyrogram import Client
 from telegram.ext import CallbackContext
 from telethon import TelegramClient
 
+DRIVES_NAMES = []
 StartTime = time.time()
 
 # enable logging
@@ -102,7 +103,25 @@ else:
     SUPPORT_CHAT = Config.SUPPORT_CHAT
     URL = Config.URL
     WORKERS = Config.WORKERS
-    WEBHOOK = Config.WEBHOOK
+    WEBHOOK = Config.WEBHOOK  
+    AUTHORIZED_CHATS = list(AUTHORIZED_CHATS)
+
+DRIVES_NAMES.append("Main")
+DRIVES_IDS.append(parent_id)
+if os.path.exists("drive_folder"):
+    with open("drive_folder", "r+") as f:
+        lines = f.readlines()
+        for line in lines:
+            try:
+                temp = line.strip().split()
+                DRIVES_IDS.append(temp[1])
+                DRIVES_NAMES.append(temp[0].replace("_", " "))
+            except:
+                pass
+            try:
+                INDEX_URLS.append(temp[2])
+            except IndexError as e:
+                INDEX_URLS.append(None)
 
 
 pbot = Client("PyrogramBot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
@@ -110,6 +129,4 @@ telethn = TelegramClient("TelethonBot", API_ID, API_HASH)
 updater = tg.Updater(TOKEN, workers=8, use_context=True)
 bot = updater.bot
 dispatcher = updater.dispatcher
-
-AUTHORIZED_CHATS = list(AUTHORIZED_CHATS)
 
