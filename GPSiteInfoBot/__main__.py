@@ -5,7 +5,6 @@ from sys import argv
 from typing import Optional
 
 from GPSiteInfoBot import (
-    ALLOW_EXCL,
     CERT_PATH,
     LOGGER,
     OWNER_ID,
@@ -20,12 +19,13 @@ from GPSiteInfoBot import (
     telethn,
     updater)
 
-# needed to dynamically load modules
-# NOTE: Module order is not guaranteed, specify that in the config file!
 
 from .modules import clone
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (BadRequest, ChatMigrated, NetworkError, TelegramError, TimedOut, Unauthorized)
+from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
+from telegram.utils.helpers import escape_markdown
+
 
 from telegram.ext import (
     CallbackContext,
@@ -33,9 +33,6 @@ from telegram.ext import (
     CommandHandler,
     Filters,
     MessageHandler)
-
-from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
-from telegram.utils.helpers import escape_markdown
 
 
 def get_readable_time(seconds: int) -> str:
@@ -68,26 +65,6 @@ Hello {}, I'm {}. [ ](https://telegra.ph/file/c063ef61885578d9e7c20.jpg)
 I can give you Grameenphone all site information of Bagerhat.
 """
 
-
-HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a Hero For Fun and help admins manage their groups. Have a look at the following for an idea of some of \
-the things I can help you with.
-
-*Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
-
-{}
-And the following:
-""".format(
-    dispatcher.bot.first_name,
-    "" if not ALLOW_EXCL else "All commands can either be used with /")
-
-
 IMPORTED = {}
 MIGRATEABLE = []
 HELPABLE = {}
@@ -98,14 +75,6 @@ DATA_EXPORT = []
 CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 GDPR = []
-
-
-dispatcher.run_async
-def test(update: Update, context: CallbackContext):
-    # pprint(eval(str(update)))
-    # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
-    update.effective_message.reply_text("This person edited a message")
-    print(update.effective_message)
 
 
 dispatcher.run_async
