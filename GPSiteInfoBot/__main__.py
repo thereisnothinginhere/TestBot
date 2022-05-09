@@ -21,9 +21,7 @@ from GPSiteInfoBot import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from GPSiteInfoBot.modules import ALL_MODULES
-from GPSiteInfoBot.modules.helper_funcs.chat_status import is_user_admin
-from GPSiteInfoBot.modules.helper_funcs.misc import paginate_modules
+
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (BadRequest, ChatMigrated, NetworkError, TelegramError, TimedOut, Unauthorized)
 
@@ -521,8 +519,6 @@ def main():
     updater.idle()
 
 
-if __name__ == "__main__":
-    LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
-    LOGGER.info("Starting Telethon")
-    telethn.start(bot_token=TOKEN)
-    main()
+pbot.start()
+main()
+idle()
