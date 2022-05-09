@@ -31,7 +31,7 @@
       "AUTHORIZED_CHATS": {
         "description": "Fill User ID and Chat ID of you want to authorize for use gdrive /clone command .",
         "value": "1063430421",
-        "required": false,
+        "required": false
 	  },
       "BL_CHATS": {
          "description": "A space separated list of group id you want blacklisted.",
