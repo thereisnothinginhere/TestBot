@@ -64,7 +64,6 @@ requests
 search_engine_parser
 speedtest-cli
 spongemock
-sqlalchemy==1.3.24
 
 telegraph
 telethon
