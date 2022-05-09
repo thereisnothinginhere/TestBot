@@ -64,6 +64,7 @@ if ENV:
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     PORT = int(os.environ.get("PORT", 5000))
+    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     URL = os.environ.get("URL", "")  # Does not contain token
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     WORKERS = int(os.environ.get("WORKERS", 8))
