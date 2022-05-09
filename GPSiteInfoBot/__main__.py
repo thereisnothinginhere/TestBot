@@ -20,7 +20,7 @@ from GPSiteInfoBot import (
     updater)
 
 
-from .modules import clone
+from .modules import clone, count, delete, list 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (BadRequest, ChatMigrated, NetworkError, TelegramError, TimedOut, Unauthorized)
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
