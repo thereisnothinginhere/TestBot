@@ -2,7 +2,6 @@ import logging
 import os
 import sys
 import time
-import spamwatch
 import threading
 import telegram.ext as tg
 
@@ -81,7 +80,7 @@ if ENV:
     URL = os.environ.get("URL", "")  # Does not contain token
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     WORKERS = int(os.environ.get("WORKERS", 8))
-    sw = "T5WnpMhoKlC0PfWntW56c6t0YnkYQCZLDlRLKnQPAh9iRcrc2ijyDJMjQvknijJJ"
+
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
