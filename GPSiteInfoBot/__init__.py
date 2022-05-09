@@ -25,7 +25,7 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
         "You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting.")
     quit(1)
 
-ENV = bool(os.environ.get("ENV", true))
+ENV = bool(os.environ.get("ENV", False))
 
 if ENV:
     TOKEN = os.environ.get("TOKEN", None)
@@ -35,7 +35,6 @@ if ENV:
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
-    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", None)
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
 
