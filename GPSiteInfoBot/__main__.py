@@ -163,12 +163,8 @@ GROUP_START_BUTTONS = [[InlineKeyboardButton(text="☸ Repository", url="https:/
 def main():
 
     start_handler = CommandHandler("start", start)
-
-
-    # dispatcher.add_handler(test_handler)
     dispatcher.add_handler(start_handler)
 
-    dispatcher.add_error_handler(error_callback)
 
     if WEBHOOK:
         LOGGER.info("Using webhooks.")
