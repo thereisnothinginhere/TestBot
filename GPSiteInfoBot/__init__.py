@@ -58,31 +58,50 @@ if ENV:
     ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
     API_HASH = os.environ.get("API_HASH", None)
     API_ID = os.environ.get("API_ID", None)
+    CERT_PATH = os.environ.get("CERT_PATH")
+    DB_URI = os.environ.get("DATABASE_URL")
+    DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
+    LOAD = os.environ.get("LOAD", "").split()
+    NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
+    PORT = int(os.environ.get("PORT", 5000))
+    URL = os.environ.get("URL", "")  # Does not contain token
+    WEBHOOK = bool(os.environ.get("WEBHOOK", False))
+    WORKERS = int(os.environ.get("WORKERS", 8))
+
+
+    # Clone Bot
+    AS_DOCUMENT = False
+    AUTO_DELETE_MESSAGE_DURATION = -1
     BUTTON_FOUR_NAME = os.environ.get("BUTTON_FOUR_NAME")
     BUTTON_FOUR_URL = os.environ.get("BUTTON_FOUR_URL")
     BUTTON_FIVE_NAME = os.environ.get("BUTTON_FIVE_NAME")
     BUTTON_FIVE_URL = os.environ.get("BUTTON_FIVE_URL")
     BUTTON_SIX_NAME = os.environ.get("BUTTON_SIX_NAME")
     BUTTON_SIX_URL = os.environ.get("BUTTON_SIX_URL")
-    CERT_PATH = os.environ.get("CERT_PATH")
-    DB_URI = os.environ.get("DATABASE_URL")
-    DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
+    CLONE_LIMIT = os.environ.get("CLONE_LIMIT", None)
+    CRYPT = os.environ.get("CRYPT", None)
+    CUSTOM_FILENAME = None
     DOWNLOAD_DIR = os.environ.get("DOWNLOAD_DIR", "usr/src/app/downloads")
-    EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
+    DOWNLOAD_LOCATION = "./DOWNLOADS"
+    DOWNLOAD_STATUS_UPDATE_INTERVAL = os.environ.get("DOWNLOAD_STATUS_UPDATE_INTERVAL")
+    EQUAL_SPLITS = bool(os.environ.get("EQUAL_SPLITS", False))
+    INDEX_URLS = os.environ.get("INDEX_URL", None)
     INDEX_URL = os.environ.get("INDEX_URL", None)
     IS_TEAM_DRIVE = bool(os.environ.get("IS_TEAM_DRIVE", False))
-    LOAD = os.environ.get("LOAD", "").split()
-    NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     parent_id = os.environ.get("GDRIVE_FOLDER_ID")
-    PORT = int(os.environ.get("PORT", 5000))
+    PHPSESSID = os.environ.get("PHPSESSID", None)
+    RSS_CHAT_ID = os.environ.get("RSS_CHAT_ID")
+    rss_session = os.environ.get("USER_STRING_SESSION, api_id=int(TELEGRAM_API), api_hash=TELEGRAM_HASH", None)
+    SHORTENER = os.environ.get("SHORTENER")
+    SHORTENER_API = os.environ.get("SHORTENER_API")
     STATUS_LIMIT = os.environ.get("STATUS_LIMIT", "3")
-    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
-    URL = os.environ.get("URL", "")  # Does not contain token
+    STOP_DUPLICATE = bool(os.environ.get("STOP_DUPLICATE", False))
+    TG_SPLIT_SIZE = os.environ.get("TG_SPLIT_SIZE", 2097151000)
+    UPTOBOX_TOKEN = os.environ.get("UPTOBOX_TOKEN", None)
     USE_SERVICE_ACCOUNTS = False
     VIEW_LINK = bool(os.environ.get("VIEW_LINK", False))
-    WEBHOOK = bool(os.environ.get("WEBHOOK", False))
-    WORKERS = int(os.environ.get("WORKERS", 8))
-
+    PROCESS_MAX_TIMEOUT = 3600
+    TG_MAX_FILE_SIZE = 2097152000
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
