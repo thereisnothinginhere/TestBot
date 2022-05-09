@@ -1,10 +1,9 @@
-from GPSiteInfoBot import AUTHORIZED_CHATS, OWNER_ID
-from telegram import Message
 from telegram.ext import MessageFilter
+from telegram import Message
+from GPSiteInfoBot import AUTHORIZED_CHATS, OWNER_ID, download_dict, download_dict_lock
 
 
-class CustomFilters(object):
-
+class CustomFilters:
     class _OwnerFilter(MessageFilter):
         def filter(self, message):
             return bool(message.from_user.id == OWNER_ID)
@@ -23,27 +22,25 @@ class CustomFilters(object):
             return bool(message.chat.id in AUTHORIZED_CHATS)
 
     authorized_chat = _AuthorizedChat()
-  
+    
 
-    class _MimeType(MessageFilter):
-        def __init__(self, mimetype):
-            self.mime_type = mimetype
-            self.name = "CustomFilters.mime_type({})".format(self.mime_type)
-
+    class _MirrorOwner(MessageFilter):
         def filter(self, message: Message):
-            return bool(
-                message.document and message.document.mime_type == self.mime_type)
-
-    mime_type = _MimeType
-
-    class _HasText(MessageFilter):
-        def filter(self, message: Message):
-            return bool(
-                message.text
-                or message.sticker
-                or message.photo
-                or message.document
-                or message.video)
-
-    has_text = _HasText()
-
+            user_id = message.from_user.id
+            if user_id == OWNER_ID:
+                return True
+            args = str(message.text).split(' ')
+            if len(args) > 1:
+                # Cancelling by gid
+                with download_dict_lock:
+                    for message_id, status in download_dict.items():
+                        if status.gid() == args[1] and status.message.from_user.id == user_id:
+                            return True
+                    else:
+                        return False
+            elif not message.reply_to_message:
+                return True
+            # Cancelling by replying to original mirror message
+            reply_user = message.reply_to_message.from_user.id
+            return bool(reply_user == user_id)
+    mirror_owner_filter = _MirrorOwner()
