@@ -8,7 +8,7 @@ from base64 import b64encode
 from urllib.parse import quote
 from urllib3 import disable_warnings
 
-from Optimus_Prime import LOGGER, SHORTENER, SHORTENER_API
+from GPSiteInfoBot import LOGGER, SHORTENER, SHORTENER_API
 
 
 def short_url(longurl):
