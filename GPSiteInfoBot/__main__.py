@@ -16,6 +16,7 @@ from GPSiteInfoBot import (
     dispatcher,
     StartTime,
     SUPPORT_CHAT,
+    pbot,
     telethn,
     updater)
 
