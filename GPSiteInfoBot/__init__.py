@@ -55,7 +55,7 @@ if ENV:
             "Your authorized chat list does not contain valid integers.")
 
     ALLOW_CHATS = "True"
-    ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
+    ALLOW_EXCL = os.environ.get("ALLOW_EXCL", True)
     API_HASH = os.environ.get("API_HASH", None)
     API_ID = os.environ.get("API_ID", None)
     CERT_PATH = os.environ.get("CERT_PATH")
