@@ -24,7 +24,7 @@ In support group you can ask for help, discover/request new features, report bug
 For queries or any issues regarding the bot please open an issue ticket or visit us at [AtrociousBotSupport](https://t.me/AtrociousBotSupport)
 
 # Deploy To Heroku.
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GPSiteInfo/GrameenphoneSiteInfoBot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/gdclone/TestBot)
 
 
 # Special Features. 
