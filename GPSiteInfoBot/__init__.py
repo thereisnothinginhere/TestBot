@@ -98,8 +98,7 @@ if ENV:
     PROCESS_MAX_TIMEOUT = 3600
     TG_MAX_FILE_SIZE = 2097152000
 
-    try:
-       from GPSiteInfoBot.config import Development as Config
+    from GPSiteInfoBot.config import Development as Config
 
     try:
         OWNER_ID = int(Config.OWNER_ID)
