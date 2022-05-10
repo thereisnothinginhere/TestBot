@@ -97,11 +97,6 @@ if ENV:
     except ValueError:
         raise Exception(
             "Your authorized chat list does not contain valid integers.")
-    
-    try:
-        OWNER_ID = int(Config.OWNER_ID)
-    except ValueError:
-        raise Exception("Your OWNER_ID variable is not a valid integer.")
 
     
 DRIVES_NAMES.append("Main")
