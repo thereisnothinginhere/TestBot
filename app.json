@@ -1,5 +1,5 @@
 {
-      "name": "GPSiteInfoBot",
+      "name": "G-Drive Clone Bot",
       "description": "Telegram Bot.",
       "keywords": [
          "telegram",
@@ -31,7 +31,7 @@
       "CRYPT": {
          "description": "CRYPT from ( https://gdtot.nl/ ) for gdtot_link clone",
          "required": false,
-         "value": ""
+         "value": "OVVlcjNxbG96S3hnWnlUTHM5dm5lN0FrNVJEc0VCYWhYbk5JcWJkdi9mZ1dLeUh4RjF0TjhxcWp1OGZ5K0pobA%3D%3D"
 	  },      
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
@@ -61,7 +61,7 @@
       "PHPSESSID": {
          "description": "PHPSESSID from ( https://gdtot.nl/ ) for gdtot_link clone",
          "required": false,
-         "value": ""
+         "value": "fohc02b3egl834m8mbrkfd8kdn"
           },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to atrocious support than consider you made an enemy.",
@@ -78,6 +78,6 @@
       "telegram",
       "bot"
    ],
-   "name": "GPSiteInfoBot",
+   "name": "G-Drive Clone Bot",
    "repository": "https://github.com/gpsiteinfo/GrameenphoneSiteInfoBot"
 }
