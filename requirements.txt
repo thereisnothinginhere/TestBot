@@ -2,21 +2,16 @@ alphabet_detector
 asyncio
 
 beautifulsoup4
-bing_image_downloader
 bleach
 bs4
 
 cachetools
 cfscrape
 coffeehouse
-countryinfo
 CurrencyConverter
 
 envparse
-emoji
-emoji-country-flag
 
-faker
 feedparser
 filetype
 fontTools
@@ -27,8 +22,6 @@ git+https://github.com/starry69/python-markdown2.git
 google-api-python-client
 google-auth-httplib2
 google-auth-oauthlib
-googletrans==3.1.0a0
-gtts
 
 hachoir
 html2text
@@ -62,7 +55,6 @@ regex
 requests
 
 search_engine_parser
-speedtest-cli
 spongemock
 
 telegraph
@@ -71,8 +63,4 @@ tenacity
 tgcrypto
 tldextract
 
-ujson
-
 wget
-
-zalgo-text
