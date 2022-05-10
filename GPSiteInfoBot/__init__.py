@@ -101,25 +101,20 @@ if ENV:
     try:
        from GPSiteInfoBot.config import Development as Config
 
-    TOKEN = Config.TOKEN
-
     try:
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
         raise Exception("Your OWNER_ID variable is not a valid integer.")
 
-    OWNER_USERNAME = Config.OWNER_USERNAME
-
- 
+    
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
     AUTHORIZED_CHATS = Config.AUTHORIZED_CHATS
     CERT_PATH = Config.CERT_PATH
-    DEL_CMDS = Config.DEL_CMDS
-    LOAD = Config.LOAD
-    NO_LOAD = Config.NO_LOAD
+    OWNER_USERNAME = Config.OWNER_USERNAME
     PORT = Config.PORT
     SUPPORT_CHAT = Config.SUPPORT_CHAT
+    TOKEN = Config.TOKEN
     URL = Config.URL
     WORKERS = Config.WORKERS
     WEBHOOK = Config.WEBHOOK  
