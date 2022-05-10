@@ -17,7 +17,6 @@ from GPSiteInfoBot import (
     updater)
 
 
-from GPSiteInfoBot.modules import clone, count, delete, list, tg_to_tf_uploader
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (BadRequest, ChatMigrated, NetworkError, TelegramError, TimedOut, Unauthorized)
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
