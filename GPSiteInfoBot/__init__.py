@@ -48,12 +48,6 @@ if ENV:
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
 
-    try:
-        AUTHORIZED_CHATS = set(int(x) for x in os.environ.get("AUTHORIZED_CHATS", "").split())
-    except ValueError:
-        raise Exception(
-            "Your authorized chat list does not contain valid integers.")
-
     API_HASH = os.environ.get("API_HASH", None)
     API_ID = os.environ.get("API_ID", None)
     CERT_PATH = os.environ.get("CERT_PATH")
@@ -98,12 +92,20 @@ if ENV:
     PROCESS_MAX_TIMEOUT = 3600
     TG_MAX_FILE_SIZE = 2097152000
 
-    from GPSiteInfoBot.config import Development as Config
 
+    try:
+        AUTHORIZED_CHATS = set(int(x) for x in os.environ.get("AUTHORIZED_CHATS", "").split())
+    except ValueError:
+        raise Exception(
+            "Your authorized chat list does not contain valid integers.")
+    
     try:
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
         raise Exception("Your OWNER_ID variable is not a valid integer.")
+   
+   else:
+        from GPSiteInfoBot.config import Development as Config
 
     
     API_ID = Config.API_ID
