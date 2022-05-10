@@ -5,14 +5,10 @@ from sys import argv
 from typing import Optional
 
 from GPSiteInfoBot import (
-    CERT_PATH,
     LOGGER,
     IGNORE_PENDING_REQUESTS,
     OWNER_ID,
-    PORT,
     TOKEN,
-    URL,
-    WEBHOOK,
     dispatcher,
     StartTime,
     SUPPORT_CHAT,
@@ -179,4 +175,5 @@ def main():
     LOGGER.info(" Atrocious Mirror Bot Started!")
 
 pbot.start()
+telethn.start(bot_token=TOKEN)
 main()
