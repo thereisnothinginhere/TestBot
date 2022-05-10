@@ -20,7 +20,7 @@ from GPSiteInfoBot import (
     updater)
 
 
-from .modules import clone, count, delete, list 
+from GPSiteInfoBot.modules import clone, count, delete, list 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (BadRequest, ChatMigrated, NetworkError, TelegramError, TimedOut, Unauthorized)
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
@@ -64,17 +64,6 @@ PM_START_TEXT = """
 Hello {}, I'm {}. [ ](https://telegra.ph/file/c063ef61885578d9e7c20.jpg)
 I can give you Grameenphone all site information of Bagerhat.
 """
-
-IMPORTED = {}
-MIGRATEABLE = []
-HELPABLE = {}
-STATS = []
-USER_INFO = []
-DATA_IMPORT = []
-DATA_EXPORT = []
-CHAT_SETTINGS = {}
-USER_SETTINGS = {}
-GDPR = []
 
 
 dispatcher.run_async
