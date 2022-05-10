@@ -63,6 +63,11 @@
          "required": false,
          "value": "fohc02b3egl834m8mbrkfd8kdn"
           },
+      "STOP_DUPLICATE": {
+        "description": "If this field is set to true, bot will check file in Drive, if it is present in Drive, downloading or cloning will be stopped.",
+        "required": false,
+         "value": "true"
+	  }, 
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to atrocious support than consider you made an enemy.",
          "required": false,
