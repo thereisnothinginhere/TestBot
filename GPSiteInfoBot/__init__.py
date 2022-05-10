@@ -45,12 +45,11 @@ if ENV:
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
-    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
-
-
+    
     API_HASH = os.environ.get("API_HASH", None)
     API_ID = os.environ.get("API_ID", None)
     CERT_PATH = os.environ.get("CERT_PATH")
+    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
     PORT = int(os.environ.get("PORT", 5000))
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     URL = os.environ.get("URL", "")  # Does not contain token
@@ -108,18 +107,6 @@ if ENV:
         from GPSiteInfoBot.config import Development as Config
 
     
-    API_ID = Config.API_ID
-    API_HASH = Config.API_HASH
-    AUTHORIZED_CHATS = Config.AUTHORIZED_CHATS
-    CERT_PATH = Config.CERT_PATH
-    OWNER_USERNAME = Config.OWNER_USERNAME
-    PORT = Config.PORT
-    SUPPORT_CHAT = Config.SUPPORT_CHAT
-    TOKEN = Config.TOKEN
-    URL = Config.URL
-    WORKERS = Config.WORKERS
-    WEBHOOK = Config.WEBHOOK  
-
 DRIVES_NAMES.append("Main")
 DRIVES_IDS.append(parent_id)
 if os.path.exists("drive_folder"):
