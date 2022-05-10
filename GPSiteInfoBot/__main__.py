@@ -7,6 +7,7 @@ from typing import Optional
 from GPSiteInfoBot import (
     CERT_PATH,
     LOGGER,
+    IGNORE_PENDING_REQUESTS,
     OWNER_ID,
     PORT,
     TOKEN,
