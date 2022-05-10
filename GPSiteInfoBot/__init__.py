@@ -54,15 +54,9 @@ if ENV:
         raise Exception(
             "Your authorized chat list does not contain valid integers.")
 
-    ALLOW_CHATS = "True"
-    ALLOW_EXCL = os.environ.get("ALLOW_EXCL", True)
     API_HASH = os.environ.get("API_HASH", None)
     API_ID = os.environ.get("API_ID", None)
     CERT_PATH = os.environ.get("CERT_PATH")
-    DB_URI = os.environ.get("DATABASE_URL")
-    DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
-    LOAD = os.environ.get("LOAD", "").split()
-    NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     PORT = int(os.environ.get("PORT", 5000))
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     URL = os.environ.get("URL", "")  # Does not contain token
@@ -117,7 +111,6 @@ if ENV:
     OWNER_USERNAME = Config.OWNER_USERNAME
 
  
-    ALLOW_EXCL = Config.ALLOW_EXCL
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
     AUTHORIZED_CHATS = Config.AUTHORIZED_CHATS
@@ -130,7 +123,6 @@ if ENV:
     URL = Config.URL
     WORKERS = Config.WORKERS
     WEBHOOK = Config.WEBHOOK  
-    AUTHORIZED_CHATS = list(AUTHORIZED_CHATS)
 
 DRIVES_NAMES.append("Main")
 DRIVES_IDS.append(parent_id)
