@@ -25,7 +25,7 @@
 	  },
       "AUTHORIZED_CHATS": {
         "description": "Fill User ID and Chat ID of you want to authorize for use gdrive /clone command .",
-        "value": "1063430421",
+        "value": "1063430421 2081111916 -1001789075626",
         "required": false
 	  },      
       "CRYPT": {
