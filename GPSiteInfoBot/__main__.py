@@ -65,7 +65,7 @@ Bot_Photo = "https://telegra.ph/file/c06d92681208824918821.jpg"
 
 def start(update, context):
     args = context.args
-    uptime = get_readable_time((time.time() - botStartTime))
+    uptime = get_readable_time((time.time() - StartTime))
     if update.effective_chat.type == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
