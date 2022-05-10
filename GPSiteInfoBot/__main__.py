@@ -60,16 +60,11 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """
-Hello {}, I'm {}. [ ](https://telegra.ph/file/c063ef61885578d9e7c20.jpg)
-I can give you Grameenphone all site information of Bagerhat.
-"""
+Bot_Photo = "https://telegra.ph/file/c06d92681208824918821.jpg"
 
-
-dispatcher.run_async
-def start(update: Update, context: CallbackContext):
+def start(update, context):
     args = context.args
-    uptime = get_readable_time((time.time() - StartTime))
+    uptime = get_readable_time((time.time() - botStartTime))
     if update.effective_chat.type == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
@@ -82,7 +77,9 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="Back", callback_data="help_back")]]))
+                        [[InlineKeyboardButton(text="Back", callback_data="help_back")]],
+                    ),
+                )
             elif args[0].lower() == "markdownhelp":
                 IMPORTED["extras"].markdown_help_sender(update)
             elif args[0].lower() == "disasters":
@@ -102,41 +99,71 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             last_name = update.effective_user.last_name
-            update.effective_message.reply_text(
+            update.effective_message.reply_photo(
+                Bot_Photo,
                 PM_START_TEXT.format(
-                    escape_markdown(first_name), escape_markdown(context.bot.first_name)),
-                parse_mode=ParseMode.MARKDOWN)
+                    escape_markdown(first_name), escape_markdown(context.bot.first_name),
+                ),
+                parse_mode=ParseMode.MARKDOWN,
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                text="✅ Add me in your group",
+                                url="t.me/{}?startgroup=true".format(
+                                    context.bot.username,
+                                ),
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="☯️ Cloud Group",
+                                url="https://t.me/+WKZqyWNHpLViMmI1",
+                            ),
+                            InlineKeyboardButton(
+                                text="✳ Find More",
+                                url="https://github.com/AL-Noman21",
+                            ),
+                        ],
+                        [
+                            InlineKeyboardButton(
+                                text="🕎 Atrocious Bot Owner",
+                                url="https://t.me/smexynos7870",
+                            ),
+                        ],
+                    ],
+                ),
+            )
+    else:
+        update.effective_message.reply_photo(
+            Bot_Photo,
+            GROUP_START_TEXT,
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.HTML)
 
 
-GROUP_START_TEXT = """
-Hi ,I am Optimus Prime Bot.
-I'm a group management bot.
+PM_START_TEXT = """
+Hello {}, I'm {}
+I can mirror all your links to Google drive. But in pm or unauthorized group you can use all telegram upload tools. If you want to upload in Google Drive you need to join Atrocious Cloud Drive.
+For commands and help press /help .
 """
 
-GROUP_START_BUTTONS = [[InlineKeyboardButton(text="☸ Repository", url="https://github.com/Al-Noman-Pro/GPSiteInfoBot"),],
+GROUP_START_TEXT = """
+Hello, I'm Atrocious Mirror Bot.
+I can mirror all your links to Google drive. But in pm or unauthorized group you can use all telegram upload tools. If you want to upload in Google Drive you need to join Atrocious Cloud Drive.
+For help and commands press /help .
+"""
 
-                      [InlineKeyboardButton(text="✅ Add me in your group", url="t.me/GPSiteInfoBot_Pro_Bot?startgroup=true")],]
+buttons = [[InlineKeyboardButton(text="☸ Cloud Drive Group", url="https://t.me/+WKZqyWNHpLViMmI1"),],
 
+          [InlineKeyboardButton(text="✅ Add me in your group", url="t.me/Atrocious_Mirror_Bot?startgroup=true",)],]
 
-def main():
 
     start_handler = CommandHandler("start", start)
     dispatcher.add_handler(start_handler)
-
-
-    if WEBHOOK:
-        LOGGER.info("Using webhooks.")
-        updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
-
-        if CERT_PATH:
-            updater.bot.set_webhook(url=URL + TOKEN, certificate=open(CERT_PATH, "rb"))
-        else:
-            updater.bot.set_webhook(url=URL + TOKEN)
-
-    else:
-        LOGGER.info("Using long polling.")
-        updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True)
-
+    
+    updater.start_polling(drop_pending_updates=IGNORE_PENDING_REQUESTS)
+    LOGGER.info(" Atrocious Mirror Bot Started!")
 
 pbot.start()
 main()
