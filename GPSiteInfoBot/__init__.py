@@ -102,9 +102,6 @@ if ENV:
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
         raise Exception("Your OWNER_ID variable is not a valid integer.")
-   
-   else:
-        from GPSiteInfoBot.config import Development as Config
 
     
 DRIVES_NAMES.append("Main")
