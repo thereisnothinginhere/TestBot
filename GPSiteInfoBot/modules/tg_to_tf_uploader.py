@@ -138,7 +138,7 @@ async def tsh(event):
 
             str(time.time() - start)
             await orta.edit(
-                f"File Successfully Uploaded to TransferSh.\n\nLink : {download_link}\n\nExpired Date : {final_date}\n\nUploaded by @Optimus_Prime_Pro_Bot"
+                f"File Successfully Uploaded to TransferSh.\n\nLink : {download_link}\n\nExpired Date : {final_date}\n\nUploaded by @Atrocious_Mirror_Bot"
             )
         except Exception as e:
             traceback.print_exc()
