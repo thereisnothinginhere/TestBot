@@ -48,6 +48,11 @@
         "required": false,
 	"value": "https://mirror-bot.al-noman.workers.dev/0:"
           },
+      "IS_TEAM_DRIVE": {
+        "description": "Set to 'true' if GDRIVE_FOLDER_ID is from a Team Drive else false or Leave it empty.",
+        "required": true,
+        "value": "false"
+	  },      
       "OWNER_ID": {
          "description": "Your telegram id number.",
          "required": true,
