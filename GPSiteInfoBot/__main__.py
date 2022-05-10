@@ -159,6 +159,8 @@ buttons = [[InlineKeyboardButton(text="☸ Cloud Drive Group", url="https://t.me
           [InlineKeyboardButton(text="✅ Add me in your group", url="t.me/Atrocious_Mirror_Bot?startgroup=true",)],]
 
 
+def main():
+
     start_handler = CommandHandler("start", start)
     dispatcher.add_handler(start_handler)
     
