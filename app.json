@@ -43,6 +43,11 @@
         "required": false,
 	"value": "17odsRh5eWC-Z316HMFhIpcKWufLZ9cq2"
           },
+      "IGNORE_PENDING_REQUESTS": {
+        "description": "",
+        "required": false,
+	"value": "true"
+          },
       "INDEX_URL": {
         "description": "Refer to https://gitlab.com/ParveenBhadooOfficial/Google-Drive-Index The URL should not have any trailing '/'.",
         "required": false,
