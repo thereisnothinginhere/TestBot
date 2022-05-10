@@ -73,6 +73,7 @@ if ENV:
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     DOWNLOAD_STATUS_UPDATE_INTERVAL = os.environ.get("DOWNLOAD_STATUS_UPDATE_INTERVAL")
     EQUAL_SPLITS = bool(os.environ.get("EQUAL_SPLITS", False))
+    IGNORE_PENDING_REQUESTS = bool(os.environ.get("IGNORE_PENDING_REQUESTS", False))
     INDEX_URLS = os.environ.get("INDEX_URL", None)
     INDEX_URL = os.environ.get("INDEX_URL", None)
     IS_TEAM_DRIVE = bool(os.environ.get("IS_TEAM_DRIVE", False))
