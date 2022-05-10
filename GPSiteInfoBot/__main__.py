@@ -161,6 +161,16 @@ buttons = [[InlineKeyboardButton(text="☸ Cloud Drive Group", url="https://t.me
 
 def main():
 
+    if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
+        try:
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am now online!")
+        except Unauthorized:
+            LOGGER.warning(
+                "Bot isnt able to send message to SUPPORT_CHAT, go support chat group and add bot in admin")
+        except BadRequest as e:
+            LOGGER.warning(e.message)
+
+
     start_handler = CommandHandler("start", start)
     dispatcher.add_handler(start_handler)
     
