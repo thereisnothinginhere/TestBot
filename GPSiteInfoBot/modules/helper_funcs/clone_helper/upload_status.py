@@ -1,4 +1,4 @@
-from GPSiteInfoBot.helper.ext_utils.bot_utils import MirrorStatus, get_readable_file_size, get_readable_time
+from GPSiteInfoBot.modules.helper_funcs.clone_helper.bot_utils import MirrorStatus, get_readable_file_size, get_readable_time
 from GPSiteInfoBot import DOWNLOAD_DIR
 
 
