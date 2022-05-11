@@ -165,6 +165,9 @@ def main():
     updater.start_polling(drop_pending_updates=IGNORE_PENDING_REQUESTS)
     LOGGER.info(" Atrocious Mirror Bot Started!")
 
-pbot.start()
-telethn.start(bot_token=TOKEN)
-main()
+if __name__ == "__main__":
+    LOGGER.info("Starting Pyrogram")
+    pbot.start()
+    LOGGER.info("Starting Telethon")
+    telethn.start(bot_token=TOKEN)
+    main()
