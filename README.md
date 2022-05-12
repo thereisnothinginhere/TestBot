@@ -8,7 +8,7 @@ Telegram Support Group [AtrociousBotSupport](https://t.me/AtrociousBotSupport)
 
 Telegram bot version : 13.11
 
-Python : 3.9.10
+Python : 3.9.12
 Telethon : Latest
 Pyrogram: Latest
 
