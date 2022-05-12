@@ -12,6 +12,7 @@ from telegram.ext import CallbackContext, CallbackQueryHandler, CommandHandler, 
 from GPSiteInfoBot.modules import tg_to_tf_uploader
 
 from GPSiteInfoBot import (
+    CERT_PATH,
     LOGGER,
     IGNORE_PENDING_REQUESTS,
     OWNER_ID,
@@ -20,7 +21,10 @@ from GPSiteInfoBot import (
     StartTime,
     SUPPORT_CHAT,
     pbot,
+    PORT,
     telethn,
+    URL,
+    WEBHOOK,
     updater)
 
 
@@ -163,8 +167,25 @@ def main():
     start_handler = CommandHandler("start", start)
     dispatcher.add_handler(start_handler)
     
-    updater.start_polling(drop_pending_updates=IGNORE_PENDING_REQUESTS)
-    LOGGER.info(" Atrocious Mirror Bot Started!")
+    if WEBHOOK:
+        LOGGER.info("Using webhooks.")
+        updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
+
+        if CERT_PATH:
+            updater.bot.set_webhook(url=URL + TOKEN, certificate=open(CERT_PATH, "rb"))
+        else:
+            updater.bot.set_webhook(url=URL + TOKEN)
+
+    else:
+        LOGGER.info("Using long polling.")
+        updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True)
+
+    if len(argv) not in (1, 3, 4):
+        telethn.disconnect()
+    else:
+        telethn.run_until_disconnected()
+
+    updater.idle()
 
 if __name__ == "__main__":
     LOGGER.info("Starting Pyrogram")
