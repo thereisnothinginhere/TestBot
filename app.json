@@ -86,7 +86,7 @@
       "TOKEN": {
          "description": "Your telegram bot token. Get one from telegram BotFather ",
          "required": true,
-         "value": "5022788742:AAEer6neUyBPBUsHAyLKX48koyc0FAzDSsY"
+         "value": "5364201782:AAEJWjL-ErtY9olBHUmvY_l2wvPPD7azsYA"
       }
    },
    "keywords": [
