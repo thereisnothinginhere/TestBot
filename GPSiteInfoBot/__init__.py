@@ -118,7 +118,7 @@ if os.path.exists("drive_folder"):
                 INDEX_URLS.append(None)
 
 
-modules_plugins = dict(root="GPSiteInfoBot/modules")
+modules_plugins = dict(root="bot/modules")
 
 pbot = Client("PyrogramBot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN, plugins=modules_plugins)
 telethn = TelegramClient("TelethonBot", API_ID, API_HASH)
