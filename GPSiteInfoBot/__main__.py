@@ -146,9 +146,9 @@ I can mirror all your links to Google drive. But in pm or unauthorized group you
 For help and commands press /help .
 """
 
-buttons = [[InlineKeyboardButton(text="☸ Cloud Drive Group", url="https://t.me/+WKZqyWNHpLViMmI1"),],
+buttons = [[InlineKeyboardButton(text="☸ Cloud Drive Group", url="https://t.me/+Xwwi7toV4YsyMWJl"),],
 
-          [InlineKeyboardButton(text="✅ Add me in your group", url="t.me/Atrocious_Mirror_Bot?startgroup=true",)],]
+          [InlineKeyboardButton(text="✅ Add me in your group", url="t.me/G_Drive_Clone_Bot?startgroup=true",)],]
 
 
 def main():
