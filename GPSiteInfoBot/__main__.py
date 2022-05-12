@@ -9,7 +9,6 @@ from telegram.error import (BadRequest, ChatMigrated, NetworkError, TelegramErro
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 from telegram.ext import CallbackContext, CallbackQueryHandler, CommandHandler, Filters, MessageHandler
-from GPSiteInfoBot.modules import tg_to_tf_uploader
 
 from GPSiteInfoBot import (
     CERT_PATH,
